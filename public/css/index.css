@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+body {
+    padding-top: 80px;
+    font-family: '游明朝', 'ヒラギノ明朝 ProN W3';
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.title {
+    font-size: 30px;
+}
+
+table, th, tb {
+    font-size: 13px;
+    font-weight: bolder;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+tb img {
+    display: block;
+    margin: 0 auto;
+}
+
+.content {
+    color: #ffffff;
+    text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px  1px 0 #000000,
+     1px  1px 0 #000000;
+}
+
+.content:hover {
+    color: #ff0000;
+    background-color: rgba(128, 128, 128, 0.6);
+}
+
+.link-items {
+    font-family: '游明朝', 'ヒラギノ明朝 ProN W3';
+    font-weight: bold;
+    color: #000000;
+}
+
+.link-items:hover {
+    color: #ff0000;
+    background-color: rgba(128, 128, 128, 0.6);
+}
+
+.btn {
+    color: #ffffff;
+    background-color: #ff0000;
+}

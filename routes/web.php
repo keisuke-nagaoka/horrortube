@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\PrefecturesController;
+use App\Http\Controllers\SpotsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,18 +17,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PrefecturesController::class, 'index']);
+Route::get('/dashboard', [PrefecturesController::class, 'index']);
+Route::resource('prefectures', PrefecturesController::class);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('prefecture/{id}/spots', [SpotsController::class, 'index'])->name('spots.index');
+Route::resource('spots', SpotsController::class)->except(['index']);
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
 require __DIR__.'/auth.php';
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('users', UsersController::class);
+
+    Route::group(['prefix' => 'spot/{id}'], function () {
+        Route::get('create', [SpotsController::class, 'create'])->name('spots.create');
+        Route::post('store', [SpotsController::class, 'store'])->name('spots.store');
+    });    
+});
