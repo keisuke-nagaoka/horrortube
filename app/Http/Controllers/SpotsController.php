@@ -11,6 +11,7 @@ use App\Http\Controllers\SpotsController;
 use App\Models\User;
 use App\Models\Prefecture;
 use App\Models\Spot;
+use App\Models\Comment;
 
 class SpotsController extends Controller
 {
@@ -27,8 +28,8 @@ class SpotsController extends Controller
             'spots' => $spots,
         ]);
     }
-
-
+    
+    
     public function create($id)
     {
         // idから都道府県を検索して取得

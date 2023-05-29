@@ -1,21 +1,27 @@
 @charset "utf-8";
 
-.nav-bar {
-    display: flex;
-    background-color: #ffffff;
-    border-radius: 2px;
-    border: 3px solid #000;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10000;
-    padding-top: 2px;
+body {
+    padding-top: 80px;
+    font-family: '游明朝', 'ヒラギノ明朝 ProN W3';
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
 }
 
-img {
-    display: flex;
-    width: 200px;
-    height: auto;
+#threads {
+    padding-left: 80px;
+}
+
+.content {
+    color: #ff0000;
+}
+
+.form-control {
+    color: #000000;
+}
+
+.link:hover {
+    background-color: rgba(128, 128, 128, 0.6);
 }
 
 .link-items {

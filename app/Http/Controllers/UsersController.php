@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\File;
 use App\Models\User;
 use App\Models\Prefecture;
 use App\Models\Spot;
+use App\Models\Comment;
 
 class UsersController extends Controller
 {

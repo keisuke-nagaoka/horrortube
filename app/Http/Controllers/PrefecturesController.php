@@ -10,6 +10,7 @@ use App\Http\Controllers\SpotsController;
 use App\Models\User;
 use App\Models\Prefecture;
 use App\Models\Spot;
+use App\Models\Comment;
 
 class PrefecturesController extends Controller
 {

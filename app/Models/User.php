@@ -46,7 +46,12 @@ class User extends Authenticatable
     
     public function prefectures()
     {
-        return $this->hasmany(Prefecture::class,);
+        return $this->hasmany(Prefecture::class);
+    }
+    
+    public function comments()
+    {
+        return $this->hasmany(Comment::class);
     }
     
 }

@@ -44,6 +44,19 @@ table {
     background-color: rgba(128, 128, 128, 0.6);
 }
 
+.comment {
+    margin-left: 42%;
+    font-family: '游明朝', 'ヒラギノ明朝 ProN W3';
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.comment:hover {
+    color: #ff0000;
+    background-color: rgba(128, 128, 128, 0.6);
+}
+
 .prefectures {
     font-family: '游明朝', 'ヒラギノ明朝 ProN W3';
     font-weight: bold;

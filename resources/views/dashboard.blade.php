@@ -46,6 +46,8 @@
         </table>
     @endif
     
+    <a class="content link comment" href="{{ route('thread') }}">コメント掲示板</a>
+
     </body>
 
 @endsection
