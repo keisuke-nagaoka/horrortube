@@ -32,7 +32,7 @@ return [
     ],
     
     'youtube' => [
-        'api_key' => 'AIzaSyC8ENgsl6cFvsyzf07nVNiyJvmVGrjyHto',
+        'api_key' => '********',
     ],
 
 ];
