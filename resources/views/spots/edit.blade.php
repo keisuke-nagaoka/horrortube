@@ -96,7 +96,7 @@
             
                 <div class="form-control my-4">
                     <label for="text" class="label">
-                        <span class="label-text">噂など</span>
+                        <span class="label-text">噂など　<a class="must">*必須項目</a></span>
                     </label>
                         <input type="text" name="content" value="{{ $spot->content }}" class="input input-bordered w-full">
                 </div>

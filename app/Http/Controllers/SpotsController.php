@@ -50,7 +50,7 @@ class SpotsController extends Controller
         // バリデーション
         $request->validate([
             'name' => 'required',
-            'content' => 'max:255',
+            'content' => 'required|max:255',
         ]);
         
         // 心霊スポットの新規登録
@@ -118,7 +118,7 @@ class SpotsController extends Controller
         // バリデーション
         $request->validate([
             'name' => 'required',
-            'content' => 'max:255',
+            'content' => 'required|max:255',
         ]);
         
         // idの値で心霊スポットを検索して取得
